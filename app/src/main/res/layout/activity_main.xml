@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    tools:context="com.nergachev.roman.fallingwords.MainActivity">
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/button_wrong"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:src="@android:drawable/ic_delete"
+        android:tint="#000000"
+        android:scaleType="fitCenter"
+        android:layout_alignParentEnd="false"
+        android:background="@android:color/holo_red_dark" />
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/button_right"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src="@android:drawable/ic_input_add"
+        android:background="#558b2f"
+        android:tint="#000000"
+        android:scaleType="fitEnd" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/request_word"
+        android:id="@+id/text_word"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/button_wrong"
+        android:layout_toStartOf="@id/button_right"
+        android:layout_alignTop="@+id/button_wrong"
+        android:textAlignment="center"
+        android:maxLines="3"
+        android:textColor="@android:color/black"
+        android:paddingTop="2dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/correct_text"
+        android:id="@+id/text_correct_text"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#558b2f"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/wrong_text"
+        android:id="@+id/text_wrong_text"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_alignTop="@+id/text_wrong"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/noanswer_text"
+        android:id="@+id/text_noanswer_text"
+        android:paddingLeft="10dp"
+        android:textColor="#8d8101"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/text_noanswer"
+        android:paddingTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/correct_value"
+        android:id="@+id/text_correct"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/text_correct_text"
+        android:textColor="#558b2f"
+        android:paddingTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/wrong_value"
+        android:id="@+id/text_wrong"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/text_wrong_text"
+        android:textColor="@android:color/holo_red_dark"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/noanswer_value"
+        android:id="@+id/text_noanswer"
+        android:textColor="#8d8101"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/text_correct_text"
+        android:layout_above="@+id/button_wrong">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:id="@+id/top_border"
+            android:src="#010100"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:id="@+id/bottom_border"
+            android:src="#010100"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/translation_value"
+            android:id="@+id/text_translation"
+            android:layout_below="@+id/top_border"
+            android:layout_centerHorizontal="true"
+            android:textColor="#8d8101" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

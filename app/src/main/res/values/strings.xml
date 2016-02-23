@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FallingWords</string>
+    <string name="request_word">Requested Word</string>
+    <string name="correct_text">Correct:</string>
+    <string name="wrong_text">Wrong:</string>
+    <string name="noanswer_text">No answer:</string>
+    <string name="correct_value">0</string>
+    <string name="wrong_value">0</string>
+    <string name="noanswer_value">0</string>
+    <string name="translation_value">Translation</string>
+</resources>
